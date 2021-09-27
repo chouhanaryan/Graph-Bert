@@ -10,13 +10,18 @@ from code.Settings import Settings
 
 #---- 'cora' , 'citeseer', 'pubmed' ----
 
-dataset_name = 'cora'
+# dataset_name = 'cora'
+dataset_name = 'bitcoin'
 
 np.random.seed(1)
 torch.manual_seed(1)
 
 #---- cora-small is for debuging only ----
-if dataset_name == 'cora-small':
+if dataset_name == 'bitcoin':
+    nclass = 3
+    nfeature = 165
+    ngraph = 203769
+elif dataset_name == 'cora-small':
     nclass = 7
     nfeature = 1433
     ngraph = 10
@@ -38,7 +43,11 @@ elif dataset_name == 'pubmed':
 #---- Pre-Training Task #1: Graph Bert Node Attribute Reconstruction (Cora, Citeseer, and Pubmed) ----
 if 0:
     #---- hyper-parameters ----
-    if dataset_name == 'pubmed':
+    if dataset_name == 'bitcoin':
+        lr = 0.1
+        k = 5
+        max_epoch = 10
+    elif dataset_name == 'pubmed':
         lr = 0.001
         k = 30
         max_epoch = 200 # ---- do an early stop when necessary ----
@@ -100,7 +109,11 @@ if 0:
 #---- Pre-Training Task #2: Graph Bert Network Structure Recovery (Cora, Citeseer, and Pubmed) ----
 if 0:
     #---- hyper-parameters ----
-    if dataset_name == 'pubmed':
+    if dataset_name == 'bitcoin':
+        lr = 0.1
+        k = 5
+        max_epoch = 10
+    elif dataset_name == 'pubmed':
         lr = 0.001
         k = 30
         max_epoch = 200 # ---- do an early stop when necessary ----
