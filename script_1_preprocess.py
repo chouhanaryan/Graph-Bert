@@ -45,7 +45,8 @@ if 1:
     print('WL, dataset: ' + dataset_name)
     # ---- objection initialization setction ---------------
     data_obj = DatasetLoader()
-    data_obj.dataset_source_folder_path = './data/' + dataset_name + '/'
+    # data_obj.dataset_source_folder_path = './data/' + dataset_name + '/'
+    data_obj.dataset_source_folder_path = dataset_name
     data_obj.dataset_name = dataset_name
 
     method_obj = MethodWLNodeColoring()
@@ -74,7 +75,8 @@ if 1:
         print('Subgraph Batching, dataset: ' + dataset_name + ', k: ' + str(k))
         # ---- objection initialization setction ---------------
         data_obj = DatasetLoader()
-        data_obj.dataset_source_folder_path = './data/' + dataset_name + '/'
+        # data_obj.dataset_source_folder_path = './data/' + dataset_name + '/'
+        data_obj.dataset_source_folder_path = dataset_name
         data_obj.dataset_name = dataset_name
         data_obj.compute_s = True
 
@@ -105,7 +107,8 @@ if 1:
         print('HopDistance, dataset: ' + dataset_name + ', k: ' + str(k))
         # ---- objection initialization setction ---------------
         data_obj = DatasetLoader()
-        data_obj.dataset_source_folder_path = './data/' + dataset_name + '/'
+        # data_obj.dataset_source_folder_path = './data/' + dataset_name + '/'
+        data_obj.dataset_source_folder_path = dataset_name
         data_obj.dataset_name = dataset_name
 
         method_obj = MethodHopDistance()
