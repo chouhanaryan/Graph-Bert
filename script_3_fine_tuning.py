@@ -7,9 +7,9 @@ import numpy as np
 import torch
 
 
-# dataset_name = 'cora'
+dataset_name = 'cora'
 # dataset_name = 'bitcoin'
-dataset_name = 'usa'
+# dataset_name = 'usa'
 
 np.random.seed(1)
 torch.manual_seed(1)
