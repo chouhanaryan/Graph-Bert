@@ -8,13 +8,18 @@ import torch
 
 
 # dataset_name = 'cora'
-dataset_name = 'bitcoin'
+# dataset_name = 'bitcoin'
+dataset_name = 'usa'
 
 np.random.seed(1)
 torch.manual_seed(1)
 
 #---- cora-small is for debuging only ----
-if dataset_name == 'bitcoin':
+if dataset_name == 'usa':
+    nclass = 4
+    nfeature = 6
+    ngraph = 1190
+elif dataset_name == 'bitcoin':
     nclass = 3
     nfeature = 165
     ngraph = 203769
@@ -39,7 +44,11 @@ elif dataset_name == 'pubmed':
 #---- Fine-Tuning Task 1: Graph Bert Node Classification (Cora, Citeseer, and Pubmed) ----
 if 1:
     #---- hyper-parameters ----
-    if dataset_name == 'bitcoin':
+    if dataset_name == 'usa':
+        lr = 0.1
+        k = 5
+        max_epoch = 50
+    elif dataset_name == 'bitcoin':
         lr = 0.1
         k = 5
         max_epoch = 10

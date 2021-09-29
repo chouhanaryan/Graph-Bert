@@ -11,13 +11,18 @@ from code.Settings import Settings
 #---- 'cora' , 'citeseer', 'pubmed' ----
 
 # dataset_name = 'cora'
-dataset_name = 'bitcoin'
+# dataset_name = 'bitcoin'
+dataset_name = 'usa'
 
 np.random.seed(1)
 torch.manual_seed(1)
 
 #---- cora-small is for debuging only ----
-if dataset_name == 'bitcoin':
+if dataset_name == 'usa':
+    nclass = 4
+    nfeature = 6
+    ngraph = 1190
+elif dataset_name == 'bitcoin':
     nclass = 3
     nfeature = 165
     ngraph = 203769
