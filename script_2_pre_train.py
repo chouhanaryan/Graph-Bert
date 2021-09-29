@@ -82,8 +82,7 @@ if 0:
     print('GrapBert, dataset: ' + dataset_name + ', Pre-training, Node Attribute Reconstruction.')
     # ---- objection initialization setction ---------------
     data_obj = DatasetLoader()
-    # data_obj.dataset_source_folder_path = './data/' + dataset_name + '/'
-    data_obj.dataset_source_folder_path = dataset_name
+    data_obj.dataset_source_folder_path = './data/' + dataset_name + '/'
     data_obj.dataset_name = dataset_name
     data_obj.k = k
     data_obj.load_all_tag = True
@@ -157,8 +156,7 @@ if 0:
     print('GrapBert, dataset: ' + dataset_name + ', Pre-training, Graph Structure Recovery.')
     # ---- objection initialization setction ---------------
     data_obj = DatasetLoader()
-    # data_obj.dataset_source_folder_path = './data/' + dataset_name + '/'
-    data_obj.dataset_source_folder_path = dataset_name
+    data_obj.dataset_source_folder_path = './data/' + dataset_name + '/'
     data_obj.dataset_name = dataset_name
     data_obj.k = k
     data_obj.load_all_tag = True
