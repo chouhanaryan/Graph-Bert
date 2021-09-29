@@ -117,7 +117,16 @@ class DatasetLoader(dataset):
 
         norm_adj = self.adj_normalize(adj + sp.eye(adj.shape[0]))
 
-        if self.dataset_name == 'cora':
+        if self.dataset_name == 'usa':
+            idx_train = range(952)
+            idx_test = range(952, 1071)
+            idx_val = range(1071, 1190)
+        elif self.dataset_name == 'bitcoin':
+            # not edited
+            idx_train = range(140)
+            idx_test = range(200, 1200)
+            idx_val = range(1200, 1500)
+        elif self.dataset_name == 'cora':
             idx_train = range(140)
             idx_test = range(200, 1200)
             idx_val = range(1200, 1500)
