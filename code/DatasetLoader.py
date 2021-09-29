@@ -118,9 +118,9 @@ class DatasetLoader(dataset):
         norm_adj = self.adj_normalize(adj + sp.eye(adj.shape[0]))
 
         if self.dataset_name == 'usa':
-            idx_train = range(100)
-            idx_test = range(200, 400)
-            idx_val = range(800, 900)
+            idx_train = range(5)
+            idx_test = range(10, 15)
+            idx_val = range(20, 25)
         elif self.dataset_name == 'bitcoin':
             # not edited
             idx_train = range(140)

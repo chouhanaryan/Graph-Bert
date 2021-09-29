@@ -45,8 +45,8 @@ elif dataset_name == 'pubmed':
 if 1:
     #---- hyper-parameters ----
     if dataset_name == 'usa':
-        lr = 0.1
-        k = 5
+        lr = 0.001
+        k = 7
         max_epoch = 50
     elif dataset_name == 'bitcoin':
         lr = 0.1
