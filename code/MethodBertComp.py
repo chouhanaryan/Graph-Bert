@@ -109,6 +109,7 @@ class BertEmbeddings(nn.Module):
     def forward(self, raw_features=None, wl_role_ids=None, init_pos_ids=None, hop_dis_ids=None):
 
         raw_feature_embeds = self.raw_feature_embeddings(raw_features)
+        print(wl_role_ids)
         role_embeddings = self.wl_role_embeddings(wl_role_ids)
         position_embeddings = self.inti_pos_embeddings(init_pos_ids)
         hop_embeddings = self.hop_dis_embeddings(hop_dis_ids)
